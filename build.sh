@@ -87,7 +87,7 @@ else
             echo "Installing dto files and kernel driver"
             echo $PASSWORD | sudo cp {fb_$TARGETDRIVER.ko,fbtft.ko} /usr/lib/modules/$KERNELVERSION/kernel/drivers/staging/fbtft/
             echo $PASSWORD | sudo cp ../meson-g12a-spi-$TARGETDRIVER.dts $DTOPATH
-            echo $PASSWORD | sudo dtc -@ -I dts -O dtb -o $DTOPATH/meson-g12a-spi0-$TARGETDRIVER.dtbo $DTOPATH/meson-g12a-spi0-$TARGETDRIVER.dts
+            echo $PASSWORD | sudo dtc -@ -I dts -O dtb -o $DTOPATH/meson-g12a-spi-$TARGETDRIVER.dtbo $DTOPATH/meson-g12a-spi-$TARGETDRIVER.dts
         fi
     fi
 fi
