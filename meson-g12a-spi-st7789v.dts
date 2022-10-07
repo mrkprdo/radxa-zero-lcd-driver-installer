@@ -16,17 +16,17 @@
                         status = "okay";
                         reg = <0>;
                         spi-max-frequency = <10000000>;
-                        width = <135>;
-                        height = <240>;
+                        width = <240>;
+                        height = <320>;
                         buswidth = <8>;
                         fps = <60>;
-                        rotate = <270>;
+                        rotate = <180>;
                         debug = <1>;
 
                         // configure pin assigment below
-                        reset-gpios = <0x2b 8 1>;       // pin 36
-                        dc-gpios = <0x2b 74 0>;         // pin 12
-                        led-gpios = <0x2b 73 0>;        // pin 18
+                        reset-gpios = <0x30 8 1>;       // pin 35
+                        dc-gpios = <0x30 74 0>;         // pin 12 | AO pin
+                        // led-gpios = <0x30 73 0>;        // pin 18
                         };
                 };
         };

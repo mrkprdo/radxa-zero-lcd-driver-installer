@@ -19,9 +19,9 @@
                         width = <128>;
                         height = <160>;
                         buswidth = <8>;
-                        fps = <30>;
-                        rotate = <0>;
-                        debug = <1>;
+                        fps = <60>;
+                        rotate = <180>;
+                        debug = <7>;
 
                         // configure pin assigment below
                         reset-gpios = <0x30 8 1>;       // pin 35
