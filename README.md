@@ -42,7 +42,10 @@ param_spidev_max_freq=10000000
 - Check if `/dev/fb1` exists, `ls /dev/fb*`
 - To test if it works, run:
 ```
+# display image
 sudo fbi -d /dev/fb1 -T 1 -noverbose -a sky.jpg
+# play video
+mplayer -vf scale -zoom -xy 240 -nolirc -vo fbdev2:/dev/fb1 test_vid.mp4
 ```
 
 
@@ -54,3 +57,16 @@ If you have better understanding of low level development of drivers you can pro
 What I normally found is that, you might need to modify the kernel file's width height and bus width according to your display. Make sure it aligns to the values you modified on your meson file.
 
 
+## fbset
+```
+# sudo apt install fbset
+# Set fb0 resolution
+fbset -fb /dev/fb0 -xres 240 -yres 320
+```
+
+## fbgrab
+```
+# sudo apt install fbcat
+# Capture framebuffers save to png
+fbgrab -t /dev/fb0 out.png
+```
