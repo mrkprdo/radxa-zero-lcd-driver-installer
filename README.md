@@ -48,6 +48,17 @@ sudo fbi -d /dev/fb1 -T 1 -noverbose -a sky.jpg
 mplayer -vf scale -zoom -xy 240 -nolirc -vo fbdev2:/dev/fb1 test_vid.mp4
 ```
 
+## Pin Configuration
+```
+VCC      - PIN 4 5v or PIN 1 3.3v
+GND      - PIN 6
+DC/AO    - PIN 12
+MOSI/SDA - PIN 19
+SCLK     - PIN 23
+SS0/CS   - PIN 24
+RESET    - PIN 35
+LED      - PIN 17
+```
 
 ## Troubleshooting
 This is the not so fun part. It might be that the kernel drivers included may not work on your specific lcd screens. Shortcut is to search github for the kernel files that someone might already made for the driver that you have. Search for `fb_st7789v.c` just an example.
