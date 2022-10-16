@@ -79,5 +79,5 @@ fbset -fb /dev/fb0 -xres 240 -yres 320
 ```
 # sudo apt install fbcat
 # Capture framebuffers save to png
-fbgrab -t /dev/fb0 out.png
+fbgrab -d /dev/fb0 out.png
 ```
