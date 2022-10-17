@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: GPL-2.0+
 /*
- * FB driver for the ST7735R LCD Controller
+ * FB driver for the st7735s LCD Controller
  *
  * Copyright (C) 2013 Noralf Tronnes
  */
@@ -12,7 +12,7 @@
 
 #include "fbtft.h"
 
-#define DRVNAME "fb_st7735r"
+#define DRVNAME "fb_st7735s"
 #define DEFAULT_GAMMA   "0F 1A 0F 18 2F 28 20 22 1F 1B 23 37 00 07 02 10\n" \
 			"0F 1B 0F 17 33 2C 29 2E 30 30 39 3F 00 07 03 10"
 
@@ -174,13 +174,13 @@ static struct fbtft_display display = {
 	},
 };
 
-FBTFT_REGISTER_DRIVER(DRVNAME, "sitronix,st7735r", &display);
+FBTFT_REGISTER_DRIVER(DRVNAME, "sitronix,st7735s", &display);
 
 MODULE_ALIAS("spi:" DRVNAME);
 MODULE_ALIAS("platform:" DRVNAME);
-MODULE_ALIAS("spi:st7735r");
-MODULE_ALIAS("platform:st7735r");
+MODULE_ALIAS("spi:st7735s");
+MODULE_ALIAS("platform:st7735s");
 
-MODULE_DESCRIPTION("FB driver for the ST7735R LCD Controller");
+MODULE_DESCRIPTION("FB driver for the ST7735S LCD Controller");
 MODULE_AUTHOR("Noralf Tronnes");
 MODULE_LICENSE("GPL");
