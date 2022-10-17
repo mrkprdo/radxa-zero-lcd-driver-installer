@@ -10,6 +10,7 @@ fbtft-y                          += fbtft-core.o fbtft-sysfs.o fbtft-bus.o fbtft
 
 # drivers
 obj-$(CONFIG_FB_TFT_ST7735R)     += fb_st7735r.o
+obj-$(CONFIG_FB_TFT_ST7735S)     += fb_st7735s.o
 obj-$(CONFIG_FB_TFT_ST7789V)     += fb_st7789v.o
 
 # Device modules
